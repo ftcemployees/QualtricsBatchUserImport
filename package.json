@@ -1,0 +1,16 @@
+{
+  "name": "qualtricsusers",
+  "version": "1.0.0",
+  "description": "A script to batch upload users to qualtrics",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bryan Muller",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "fast-csv": "^2.4.1"
+  }
+}
