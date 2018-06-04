@@ -13,12 +13,16 @@ const Confirm = require('prompt-confirm');
  * Extract data from the csv file and store it in an array of user objects
  */
 const parseCSV = (file, cb) => {
+    try {
     const stream = fs.createReadStream(file);
     let users = [];
     csv.fromStream(stream, {headers: true}).on('data', data => { users.push(data)})
                                                 .on('error', err => cb(err))
                                                 .on('end', () => cb(null, users)) 
-
+    } catch (e) {
+        console.error("Could not open file. Please check your path and try again");
+        process.exit(1);
+    }
 }
 
 /**
@@ -66,7 +70,7 @@ function getParams() {
  * Uploads a set of users to Qualtrics 
  */
 function uploadUsers(err, users) {
-    if (err) console.log(err);
+    if (err) console.log(`Unable to read file. Please check your file path and try again`);
     else {
          axios.all(users.map(buildQueries))
            // Could use some work....
