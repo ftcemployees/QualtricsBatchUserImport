@@ -14,9 +14,17 @@ Ensure you have a CSV file with the following columns CASE SENSITIVE
 The userType column must contain the id of the User Type being assigned to the user. 
 This should be in the format of "UT_1231234513213." Instructions on how to find the User Type id are below.
 
-## Use
+## Importing Users
 
-To use the tool, download the binary for you system
+1. Download the binary for your system (Windows, Mac, Linux)
+2. Save the binary in the same folder as your CSV file
+3. Double click the file to run.
+4. Enter your Qualtrics API Token 
+    * You can find this under Qualtrics IDs in your Account Settings
+5. Enter the path to your CSV file
+    * For best results, run the binary in the same folder as your CSV file.
+6. The tool will upload the new users to Qualtrics. 
+
 
 
 ## Finding UserType
