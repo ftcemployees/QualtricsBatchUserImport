@@ -17,6 +17,7 @@ This should be in the format of "UT_1231234513213." Instructions on how to find 
 ## Importing Users
 
 1. Download the binary for your system (Windows, Mac, Linux)
+   * You can download a the latest release from [here](https://github.com/ftcemployees/QualtricsBatchUserImport/releases)
 2. Save the binary in the same folder as your CSV file
 3. Double click the file to run.
 4. Enter your Qualtrics API Token 
@@ -35,4 +36,6 @@ This should be in the format of "UT_1231234513213." Instructions on how to find 
 4. Click on Inspect (this will open the HTML inspector)
 5. The User Type id will be enclosed in the 'p1' HTML attribute
 
+An example UserType:
 
+![Example User Type](./Example%20UserType.png)
